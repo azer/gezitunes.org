@@ -1,0 +1,27 @@
+{
+  "name": "gezitunes",
+  "version": "0.0.0",
+  "description": "Free music player for the songs of gezi resistance!",
+  "main": "index.js",
+  "keywords": [
+    "bandista",
+    "music"
+  ],
+  "repository": {
+    "url": "git@github.com:azer/gezitunes.org.git",
+    "type": "git"
+  },
+  "author": "Azer Koçulu <azer@kodfabrik.com>",
+  "license": "BSD",
+  "dependencies": {
+    "browserify": "*",
+    "stylus": "~0.34.1",
+    "jsify": "0.0.1",
+    "attr": "0.0.1",
+    "domquery": "0.0.x",
+    "new-format": "0.0.1",
+    "attrs": "0.0.0",
+    "swipe": "*",
+    "shuffle-array": "0.0.0"
+  }
+}

@@ -1,0 +1,24 @@
+browserify = bin 'browserify/cmd.js'
+stylus = bin 'stylus'
+jsify = bin 'jsify'
+
+all 'dist/player.css', 'dist/index.html', 'dist/player.js', 'lib/templates.js'
+
+target 'dist/index.html', 'index.html', ->
+    debug 'Building dist/player.js'
+    cp 'index.html', 'dist/index.html'
+
+target 'dist/player.js', '*.js', 'lib/*.js', 'node_modules', 'components', ->
+    debug 'Building dist/player.js'
+    browserify "index.js", "-o", "dist/player.js"
+
+target 'dist/player.css', 'player.styl', ->
+    debug 'Building dist/player.css'
+    stylus "player.styl -o dist/"
+
+target 'lib/templates.js', 'templates', ->
+    jsify "templates/* -o lib/templates.js"
+
+task 'deploy', ->
+    mkdir '-p', 'prod'
+    cp '-rf', 'dist/*', 'prod/.'
