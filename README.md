@@ -2,6 +2,8 @@
 
 A web app to play the songs of Gezi Resistance. Check it out at [gezitunes.org](http://gezitunes.org)
 
+Photography is by [Barış Tolga Candan](http://www.flickr.com/photos/veterinarius/9077560109)
+
 ## Install
 
 ```bash
